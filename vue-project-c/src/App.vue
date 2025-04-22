@@ -4,6 +4,12 @@ import img1 from './images/USP-1.png'; // en Objeto array no me reconocia la rut
 import img2 from './images/USP-2.png';
 import img3 from './images/USP-3.png';
 
+// Se declara funcion para el Buttom:
+
+function hacerAlgo() {
+  alert('Hiciste clic en el botón 🎉');
+}
+
 // Se declara array con diferentes propiedades para usarlo luego con v-for en div
 const SectionistModulos = reactive([
   {
@@ -34,14 +40,14 @@ const SectionistModulos = reactive([
         <img src="./images/Ironhack_logo.png" alt="Logo" />
         <img src="./images/Burger_menu.png" alt="Menu" />
       </nav>
+    </header>
 
-      <section class="hero-text">
+    <section class="hero-text">
         <img src="./images/Vue_logo.png" alt="LogoVue" />
         <h1><strong>Welcome to Vue.js</strong></h1>
         <p>Become a coding ninja with the fastest-growing JavaScript framework</p>
-        <button><strong>Awesome!</strong></button>
+        <button @click="hacerAlgo"><strong>Awesome!</strong></button>
       </section>
-    </header>
 
   <!--Aqui se usan los items del array. Modulo hace referencia a cada item y el punto a su propiedad-->
     <section class="sectionits">
@@ -57,12 +63,20 @@ const SectionistModulos = reactive([
 <style scoped>
 
 #app {
-  display: flex;
-  flex-direction: column;
+  max-width: 600px;
+  height: 803px;
+  font-size: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
+
+
 .navegador {
   display: flex;
   justify-content: space-between;
+  margin-top: 20px;
+  margin-left: 30px;
+  margin-right: 30px;
 }
 
 .hero-text {
